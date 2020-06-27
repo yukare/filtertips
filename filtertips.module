@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Contains filtertips.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_help().
+ */
+function filtertips_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the filtertips module.
+    case 'help.page.filtertips':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Edit your own tips to text formats') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_node_form_alter().
+ */
+function filtertips_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $config = \Drupal::config('filtertips.settings');
+  $suffix = '';
+  foreach($form['body']['widget'][0]['#allowed_formats'] as $key => $value) {
+    $suffix .= '<details class="filtertips-details filtertips-comment">
+    <summary class="filtertips-summary">' .$config->get($key . '_title') . '</summary><div class="filtertips-guidelines">' . $config->get($key . '_tips')['value'] . '</details>';
+  }
+  $form['body']['#suffix'] = $suffix;
+  $form['body']['#attached']['library'][] = 'filtertips/filtertips';
+}
+
+
+/**
+ * Implements hook_form_node_form_alter().
+ */
+function filtertips_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  /*if (substr( $form_id, 0, 8 ) === "comment_") {
+    $config = \Drupal::config('filtertips.settings');
+    $form['comment_body']['#suffix'] = '
+    <details class="filtertips-details filtertips-comment">
+      <summary class="filtertips-summary">' .$config->get('comentario_title') . '</summary><div class="filtertips-guidelines">' . $config->get('comentario_tips')['value'] . '</details>';
+    $form['comment_body']['#attached']['library'][] = 'filtertips/filtertips';
+  }*/
+}

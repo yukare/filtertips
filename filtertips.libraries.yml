@@ -1,0 +1,5 @@
+filtertips:
+  version: 1.x
+  css:
+    theme:
+      css/filtertips.css: {}

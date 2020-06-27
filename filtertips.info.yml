@@ -1,0 +1,5 @@
+name: FilterTips
+type: module
+description: Edit your own tips to text formats
+core: 8.x
+package: Filters

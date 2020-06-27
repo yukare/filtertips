@@ -1,0 +1,14 @@
+{
+  "name": "drupal/filtertips",
+  "type": "drupal-module",
+  "description": "Edit your own tips to text formats",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/filtertips",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/filtertips",
+    "source": "http://cgit.drupalcode.org/filtertips"
+  },
+  "require": { }
+}

@@ -1,0 +1,6 @@
+.filtertips-details summary {
+  background: none;
+  cursor: pointer;
+  color: blue;
+  text-transform: none;
+}

@@ -1,0 +1,7 @@
+filtertips.settings:
+  title: 'Configure filter Guidelines'
+  route_name: filtertips.settings
+  description: 'Configure the tips for text formats.'
+  parent: system.admin_config_system
+  weight: 99
+
