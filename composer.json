@@ -1,14 +1,14 @@
 {
-  "name": "drupal/filtertips",
-  "type": "drupal-module",
+  "name": "yukare/filtertips",
+  "type": "drupal-custom-module",
   "description": "Edit your own tips to text formats",
   "keywords": ["Drupal"],
   "license": "GPL-2.0+",
-  "homepage": "https://www.drupal.org/project/filtertips",
+  "homepage": "https://github.com/yukare/filtertips",
   "minimum-stability": "dev",
   "support": {
-    "issues": "https://www.drupal.org/project/issues/filtertips",
-    "source": "http://cgit.drupalcode.org/filtertips"
+    "issues": "https://github.com/yukare/filtertips/issues",
+    "source": "https://github.com/yukare/filtertips"
   },
   "require": { }
 }
